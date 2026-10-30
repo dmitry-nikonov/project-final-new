@@ -10,6 +10,7 @@ import java.util.List;
 @Transactional(readOnly = true)
 public interface AttachmentRepository extends BaseRepository<Attachment> {
 
+
     @Query("SELECT a FROM Attachment a WHERE a.objectId =:objectId AND a.objectType =:objectType")
     List<Attachment> getAllForObject(long objectId, ObjectType objectType);
 }

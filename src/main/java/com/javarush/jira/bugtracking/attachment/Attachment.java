@@ -18,6 +18,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Attachment extends NamedEntity {
 
+
+
     @Column(name = "date_time", columnDefinition = "timestamp default now()")
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     protected LocalDateTime dateTime = LocalDateTime.now();
